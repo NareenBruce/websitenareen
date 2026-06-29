@@ -201,6 +201,23 @@ button { border: none; cursor: pointer; background: none; font-family: inherit; 
   color: var(--text);
   background: rgba(255,255,255,0.06);
 }
+.nav__link--resume {
+  color: var(--accent) !important;
+  border: 1px solid rgba(99,102,241,0.5);
+  border-radius: 20px;
+  padding: 0.6rem 1.4rem;
+}
+.nav__link--resume:hover {
+  background: rgba(99,102,241,0.15) !important;
+  border-color: var(--accent);
+}
+.nav__mobile-link--resume {
+  color: var(--accent);
+  border: 1px solid rgba(99,102,241,0.4);
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 0.4rem;
+}
 
 /* hamburger */
 .nav__hamburger {
