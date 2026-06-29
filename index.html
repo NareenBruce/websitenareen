@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
   </head>
   <body>
 
@@ -17,13 +18,11 @@
     <nav class="nav" id="nav">
       <div class="nav__container">
         <a href="#home" class="nav__logo">
-          <div class="nav__logo-img-wrap">
-            <img src="./assets/png/nareen.jpeg" alt="Nareenthiran" class="nav__logo-img" />
-          </div>
           <span class="nav__logo-text">Nareen</span>
         </a>
         <ul class="nav__links">
           <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#experience" class="nav__link">Experience</a></li>
           <li><a href="#projects" class="nav__link">Projects</a></li>
           <li><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
@@ -35,6 +34,7 @@
       </div>
       <div class="nav__mobile" id="mobileMenu">
         <a href="#about" class="nav__mobile-link">About</a>
+        <a href="#experience" class="nav__mobile-link">Experience</a>
         <a href="#projects" class="nav__mobile-link">Projects</a>
         <a href="#contact" class="nav__mobile-link">Contact</a>
       </div>
@@ -47,41 +47,47 @@
         <div class="hero__orb hero__orb--2"></div>
         <div class="hero__orb hero__orb--3"></div>
         <div class="hero__grid"></div>
+        <div class="hero__cursor-glow"></div>
       </div>
-      <div class="hero__content">
-        <div class="hero__photo-wrap">
-          <img src="./assets/png/nareen.jpeg" alt="Nareenthiran Bhuvaneswaran" class="hero__photo" />
-          <div class="hero__photo-ring"></div>
+      <div class="hero__container">
+
+        <!-- Left: text -->
+        <div class="hero__left">
+          <p class="hero__greeting">Hi, I'm</p>
+          <h1 class="hero__name">Nareenthiran<br>Bhuvaneswaran</h1>
+          <div class="hero__role-wrap">
+            <span class="hero__role">Data Scientist</span>
+            <span class="hero__role-sep">&</span>
+            <span class="hero__role">AI Engineer</span>
+          </div>
+          <p class="hero__tagline">Building real-time computer vision systems, LLM-powered apps, and full-stack AI solutions that actually ship.</p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">View Projects</a>
+            <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+          </div>
+          <div class="hero__socials">
+            <a href="https://www.linkedin.com/in/nareenthiran-bhuvaneswaran-75b523248/" target="_blank" class="hero__social" title="LinkedIn">
+              <img src="./assets/png/linkedin-ico.png" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/NareenBruce" target="_blank" class="hero__social" title="GitHub">
+              <img src="./assets/png/github-ico.png" alt="GitHub" />
+            </a>
+            <a href="https://x.com/nareenthiran" target="_blank" class="hero__social" title="Twitter / X">
+              <img src="./assets/png/twitter-ico.png" alt="Twitter" />
+            </a>
+            <a href="https://www.instagram.com/nareen_thiran/" target="_blank" class="hero__social" title="Instagram">
+              <img src="./assets/png/insta-ico.png" alt="Instagram" />
+            </a>
+          </div>
         </div>
-        <p class="hero__greeting">Hello, I'm</p>
-        <h1 class="hero__name">Nareenthiran<br>Bhuvaneswaran</h1>
-        <div class="hero__role-wrap">
-          <span class="hero__role">Data Scientist</span>
-          <span class="hero__role-sep">&</span>
-          <span class="hero__role">AI Engineer</span>
+
+        <!-- Right: photo -->
+        <div class="hero__right">
+          <div class="hero__slideshow">
+            <img src="./assets/png/nareen2.jpg" alt="Nareenthiran Bhuvaneswaran" class="hero__photo-main" />
+          </div>
         </div>
-        <p class="hero__tagline">
-          Building real-time computer vision systems, LLM-powered apps,<br>
-          and full-stack AI solutions that actually ship.
-        </p>
-        <div class="hero__actions">
-          <a href="#projects" class="btn btn--primary">View Projects</a>
-          <a href="#contact" class="btn btn--ghost">Get in Touch</a>
-        </div>
-        <div class="hero__socials">
-          <a href="https://www.linkedin.com/in/nareenthiran-bhuvaneswaran-75b523248/" target="_blank" class="hero__social" title="LinkedIn">
-            <img src="./assets/png/linkedin-ico.png" alt="LinkedIn" />
-          </a>
-          <a href="https://github.com/NareenBruce" target="_blank" class="hero__social" title="GitHub">
-            <img src="./assets/png/github-ico.png" alt="GitHub" />
-          </a>
-          <a href="https://x.com/nareenthiran" target="_blank" class="hero__social" title="Twitter / X">
-            <img src="./assets/png/twitter-ico.png" alt="Twitter" />
-          </a>
-          <a href="https://www.instagram.com/nareen_thiran/" target="_blank" class="hero__social" title="Instagram">
-            <img src="./assets/png/insta-ico.png" alt="Instagram" />
-          </a>
-        </div>
+
       </div>
       <div class="hero__scroll-hint">
         <div class="mouse"><div class="mouse__wheel"></div></div>
@@ -100,11 +106,11 @@
 
           <!-- Bio — full width -->
           <div class="glass-card about__bio">
-            <p>I'm <strong>Nareenthiran Bhuvaneswaran</strong>, a Computer Science (Data Science) student at Multimedia University with a <strong>CGPA of 3.94</strong> and Dean's List every trimester. I build things at the intersection of <strong>AI, data, and software</strong> — from real-time computer vision systems to LLM-powered applications and full-stack web platforms.</p>
-            <p>At <strong>Juara Partners</strong>, I worked as a <strong>Data Science & AI Engineer Intern</strong>, where I deployed an LLM-powered WhatsApp chatbot using Docker and the Meta Business API, built OCR pipelines, and engineered n8n automation workflows that replaced manual processes end-to-end.</p>
-            <p>For my <strong>Final Year Project</strong>, I built <strong>ARMS</strong> (Automated Reviewer Matching System) — a full-stack platform automating academic peer reviewer assignment using <strong>SPECTER transformer embeddings</strong> trained on citation graphs, matched against a self-scraped database of <strong>493 experts and 10,817 publications</strong>. A recency decay function weights temporal relevance, and a <strong>Groq 120B LLM RAG pipeline</strong> generates explainable justifications. Validated on a real conference dataset with <strong>89.3% expert-level relevance at 0.4s per query</strong>.</p>
-            <p>My other projects include a real-time focus tracker (YOLOv8 + MediaPipe), a road hazard detection system hitting 75.9% mAP at 30 FPS, and a marketing prediction model deployed as a Streamlit app — all built with <strong>Python, FastAPI, and Next.js</strong>.</p>
-            <p>Outside of tech, I served as <strong>Vice President of Student Academics</strong> at MMU's Student Representative Council for two consecutive terms, and I'm a proud recipient of the <strong>Yayasan Telekom Malaysia (YTM) Scholarship</strong>.</p>
+            <p>I'm Nareenthiran Bhuvaneswaran, a Computer Science (Data Science) student building at the intersection of AI, data, and software. My work spans real-time computer vision, LLM-powered applications, and full-stack platforms. CGPA 3.94, Dean's List every trimester.</p>
+            <p>My Final Year Project, ARMS, automates academic peer-reviewer assignment: SPECTER transformer embeddings trained on citation graphs, matched against a self-scraped database of 493 experts and 10,817 publications, with a recency-decay function for temporal relevance and a Groq 120B RAG pipeline generating explainable justifications. Validated on a real conference dataset at 89.3% expert-level relevance, 0.4s per query.</p>
+            <p>At Juara Partners, I worked as a Data Science & AI Engineer Intern, deploying an LLM-powered WhatsApp chatbot (Docker, Meta Business API), building OCR pipelines, and engineering n8n workflows that replaced manual processes end-to-end.</p>
+            <p>Other projects: a real-time focus tracker (YOLOv8 + MediaPipe), a road hazard detection system at 75.9% mAP / 30 FPS, and a marketing prediction model deployed via Streamlit. All built on Python, FastAPI, and Next.js.</p>
+            <p>Outside of tech, I served two terms as Vice President of Student Academics at MMU's Student Representative Council, and I'm a recipient of the Yayasan Telekom Malaysia (YTM) Scholarship.</p>
             <a href="#contact" class="btn btn--primary" style="margin-top:2.4rem;display:inline-block;">Contact Me</a>
           </div>
 
@@ -114,26 +120,34 @@
             <div class="glass-card about__skills-card">
               <h3 class="about__card-title">My Skills</h3>
               <div class="skills-wrap">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">R</span>
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">TypeScript</span>
-                <span class="skill-tag">Machine Learning</span>
-                <span class="skill-tag">Computer Vision</span>
-                <span class="skill-tag">YOLOv8</span>
-                <span class="skill-tag">MediaPipe</span>
-                <span class="skill-tag">LLM / AI</span>
-                <span class="skill-tag">FastAPI</span>
-                <span class="skill-tag">Next.js</span>
-                <span class="skill-tag">Flask</span>
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">n8n</span>
-                <span class="skill-tag">Power BI</span>
-                <span class="skill-tag">HTML &amp; CSS</span>
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">Java</span>
-                <span class="skill-tag">C++</span>
+                <span class="skill-tag"><i class="devicon-python-plain colored"></i>Python</span>
+                <span class="skill-tag"><i class="devicon-r-plain colored"></i>R</span>
+                <span class="skill-tag"><i class="devicon-mysql-plain colored"></i>SQL</span>
+                <span class="skill-tag"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+                <span class="skill-tag"><i class="devicon-typescript-plain colored"></i>TypeScript</span>
+                <span class="skill-tag"><i class="devicon-tensorflow-original colored"></i>TensorFlow</span>
+                <span class="skill-tag"><i class="devicon-pytorch-original colored"></i>PyTorch</span>
+                <span class="skill-tag"><i class="devicon-numpy-original colored"></i>NumPy</span>
+                <span class="skill-tag"><i class="devicon-pandas-original colored"></i>Pandas</span>
+                <span class="skill-tag"><i class="devicon-opencv-plain colored"></i>OpenCV</span>
+                <span class="skill-tag"><i class="devicon-fastapi-plain colored"></i>FastAPI</span>
+                <span class="skill-tag"><i class="devicon-nextjs-original colored"></i>Next.js</span>
+                <span class="skill-tag"><i class="devicon-flask-original"></i>Flask</span>
+                <span class="skill-tag"><i class="devicon-docker-plain colored"></i>Docker</span>
+                <span class="skill-tag"><i class="devicon-streamlit-original colored"></i>Streamlit</span>
+                <span class="skill-tag"><i class="devicon-html5-plain colored"></i>HTML &amp; CSS</span>
+                <span class="skill-tag"><i class="devicon-git-plain colored"></i>Git</span>
+                <span class="skill-tag"><i class="devicon-amazonwebservices-original colored"></i>AWS</span>
+                <span class="skill-tag"><i class="devicon-azure-plain colored"></i>Azure</span>
+                <span class="skill-tag"><i class="devicon-jupyter-plain colored"></i>Jupyter</span>
+                <span class="skill-tag"><i class="devicon-java-plain colored"></i>Java</span>
+                <span class="skill-tag"><i class="devicon-cplusplus-plain colored"></i>C++</span>
+                <span class="skill-tag">🧠 LLM / AI</span>
+                <span class="skill-tag">👁️ Computer Vision</span>
+                <span class="skill-tag">⚡ YOLOv8</span>
+                <span class="skill-tag">🤚 MediaPipe</span>
+                <span class="skill-tag">🔄 n8n</span>
+                <span class="skill-tag">📊 Power BI</span>
               </div>
             </div>
 
@@ -141,11 +155,11 @@
               <h3 class="about__card-title">Certifications &amp; Honours</h3>
 
               <p class="certs__section-label">🏆 Honours</p>
-              <div class="certs__honour">
-                <div class="certs__honour-title">Best Presenter Award — CITIC 2026</div>
+              <a href="https://drive.google.com/file/d/1yyy9k7LJHsD2g3nGyh4kvIZMdBrpkVR3/view?usp=sharing" target="_blank" class="certs__honour certs__honour--link">
+                <div class="certs__honour-title">Best Presenter Award — CITIC 2026 ↗</div>
                 <div class="certs__honour-issuer">Multimedia University · May 2026</div>
                 <div class="certs__honour-desc">Presented "ARMS: Automated Reviewer Matching System Using Citation-based Embeddings" at CITIC 2026, hosted by DIFCON at MMU.</div>
-              </div>
+              </a>
 
               <p class="certs__section-label" style="margin-top:2rem;">📜 Certifications</p>
               <ul class="certs__list">
@@ -183,6 +197,62 @@
               <a href="https://www.linkedin.com/in/nareenthiran-bhuvaneswaran-75b523248/details/certifications/" target="_blank" class="certs__view-all">View all on LinkedIn →</a>
             </div>
 
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">Where I've Worked</span>
+          <h2 class="section__title">Experience</h2>
+        </div>
+
+        <div class="tl-wrap">
+          <!-- Horizontal line -->
+          <div class="tl-line"></div>
+
+          <!-- Dots -->
+          <div class="tl-dot tl-dot--l"></div>
+          <div class="tl-dot tl-dot--r"></div>
+
+          <!-- Stems -->
+          <div class="tl-stem tl-stem--l"></div>
+          <div class="tl-stem tl-stem--r"></div>
+
+          <!-- SRC card: above the line, left -->
+          <div class="glass-card tl-card tl-card--l">
+            <p class="tl-date">Dec 2023 – Nov 2024</p>
+            <h4 class="tl-role">Vice President of Student Academics</h4>
+            <p class="tl-org">SRC MMU · Part-time</p>
+            <ul class="tl-bullets">
+              <li>Led academic welfare and policy for MMU's student body across two consecutive terms</li>
+              <li>Advised on Calendar scheduling, Internship Programs, and academic matters under SAED</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tl-tag">Leadership</span>
+              <span class="tl-tag">Policy</span>
+              <span class="tl-tag">Student Affairs</span>
+            </div>
+          </div>
+
+          <!-- Juara card: below the line, right -->
+          <div class="glass-card tl-card tl-card--r">
+            <p class="tl-date">Jul – Oct 2025 · 4 months</p>
+            <h4 class="tl-role">Data Science &amp; AI Engineer Intern</h4>
+            <p class="tl-org">Juara Partners · On-site, Kelana Jaya</p>
+            <ul class="tl-bullets">
+              <li>Deployed LLM-powered WhatsApp chatbot using Docker and Meta Business API</li>
+              <li>Built OCR pipelines and n8n automation workflows replacing manual processes end-to-end</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tl-tag">AI / LLM</span>
+              <span class="tl-tag">Docker</span>
+              <span class="tl-tag">n8n</span>
+              <span class="tl-tag">OCR</span>
+            </div>
           </div>
         </div>
       </div>
