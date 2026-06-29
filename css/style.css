@@ -552,20 +552,29 @@ button { border: none; cursor: pointer; background: none; font-family: inherit; 
    ================================================================ */
 
 .about__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.about__lower {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.4rem;
 }
 @media (max-width: 56em) {
-  .about__grid { grid-template-columns: 1fr; }
+  .about__lower { grid-template-columns: 1fr; }
 }
 
 .about__bio,
-.about__skills-card {
+.about__skills-card,
+.about__certs-card {
   padding: 3.6rem;
 }
 @media (max-width: 37.5em) {
-  .about__bio, .about__skills-card { padding: 2.6rem; }
+  .about__bio,
+  .about__skills-card,
+  .about__certs-card { padding: 2.6rem; }
 }
 
 .about__card-title {
@@ -828,3 +837,88 @@ button { border: none; cursor: pointer; background: none; font-family: inherit; 
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+/* ================================================================
+   CERTIFICATIONS & HONOURS CARD
+   ================================================================ */
+
+.certs__section-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-dim);
+  margin-bottom: 1.2rem;
+}
+
+.certs__honour {
+  background: rgba(99,102,241,0.06);
+  border: 1px solid rgba(99,102,241,0.15);
+  border-radius: var(--radius-sm);
+  padding: 1.4rem 1.6rem;
+}
+
+.certs__honour-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+.certs__honour-issuer {
+  font-size: 1.25rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+
+.certs__honour-desc {
+  font-size: 1.35rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.certs__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.6rem;
+}
+
+.certs__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition: background var(--transition), border-color var(--transition);
+}
+.certs__item:hover {
+  background: rgba(255,255,255,0.04);
+  border-color: var(--glass-border);
+}
+
+.certs__item-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+}
+
+.certs__item-issuer {
+  font-size: 1.2rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.certs__view-all {
+  display: inline-block;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: color var(--transition), gap var(--transition);
+}
+.certs__view-all:hover { color: #818cf8; }

@@ -97,39 +97,92 @@
           <h2 class="section__title">About Me</h2>
         </div>
         <div class="about__grid">
+
+          <!-- Bio — full width -->
           <div class="glass-card about__bio">
-            <h3 class="about__card-title">About Me</h3>
             <p>I'm <strong>Nareenthiran Bhuvaneswaran</strong>, a Computer Science (Data Science) student at Multimedia University with a <strong>CGPA of 3.94</strong> and Dean's List every trimester. I build things at the intersection of <strong>AI, data, and software</strong> — from real-time computer vision systems to LLM-powered applications and full-stack web platforms.</p>
             <p>At <strong>Juara Partners</strong>, I worked as a <strong>Data Science & AI Engineer Intern</strong>, where I deployed an LLM-powered WhatsApp chatbot using Docker and the Meta Business API, built OCR pipelines, and engineered n8n automation workflows that replaced manual processes end-to-end.</p>
-            <p>For my <strong>Final Year Project</strong>, I built <strong>ARMS</strong> (Automated Reviewer Matching System) — a full-stack platform automating academic peer reviewer assignment using <strong>SPECTER transformer embeddings</strong> trained on citation graphs, matched against a self-scraped database of <strong>493 experts and 10,817 publications</strong>. A recency decay function weights temporal relevance, and a <strong>Groq 120B LLM RAG pipeline</strong> generates explainable justifications per recommendation. Validated on a real conference dataset with <strong>89.3% expert-level relevance at 0.4s per query</strong>.</p>
-            <p>My other projects include a real-time focus tracker using YOLOv8 and MediaPipe, a road hazard detection system hitting 75.9% mAP at 30 FPS, and a marketing prediction model deployed as a Streamlit app — all built with <strong>Python, FastAPI, and Next.js</strong>.</p>
+            <p>For my <strong>Final Year Project</strong>, I built <strong>ARMS</strong> (Automated Reviewer Matching System) — a full-stack platform automating academic peer reviewer assignment using <strong>SPECTER transformer embeddings</strong> trained on citation graphs, matched against a self-scraped database of <strong>493 experts and 10,817 publications</strong>. A recency decay function weights temporal relevance, and a <strong>Groq 120B LLM RAG pipeline</strong> generates explainable justifications. Validated on a real conference dataset with <strong>89.3% expert-level relevance at 0.4s per query</strong>.</p>
+            <p>My other projects include a real-time focus tracker (YOLOv8 + MediaPipe), a road hazard detection system hitting 75.9% mAP at 30 FPS, and a marketing prediction model deployed as a Streamlit app — all built with <strong>Python, FastAPI, and Next.js</strong>.</p>
             <p>Outside of tech, I served as <strong>Vice President of Student Academics</strong> at MMU's Student Representative Council for two consecutive terms, and I'm a proud recipient of the <strong>Yayasan Telekom Malaysia (YTM) Scholarship</strong>.</p>
             <a href="#contact" class="btn btn--primary" style="margin-top:2.4rem;display:inline-block;">Contact Me</a>
           </div>
-          <div class="glass-card about__skills-card">
-            <h3 class="about__card-title">My Skills</h3>
-            <div class="skills-wrap">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">R</span>
-              <span class="skill-tag">SQL</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">TypeScript</span>
-              <span class="skill-tag">Machine Learning</span>
-              <span class="skill-tag">Computer Vision</span>
-              <span class="skill-tag">YOLOv8</span>
-              <span class="skill-tag">MediaPipe</span>
-              <span class="skill-tag">LLM / AI</span>
-              <span class="skill-tag">FastAPI</span>
-              <span class="skill-tag">Next.js</span>
-              <span class="skill-tag">Flask</span>
-              <span class="skill-tag">Docker</span>
-              <span class="skill-tag">n8n</span>
-              <span class="skill-tag">Power BI</span>
-              <span class="skill-tag">HTML &amp; CSS</span>
-              <span class="skill-tag">Git</span>
-              <span class="skill-tag">Java</span>
-              <span class="skill-tag">C++</span>
+
+          <!-- Lower row: Skills + Certs side by side -->
+          <div class="about__lower">
+
+            <div class="glass-card about__skills-card">
+              <h3 class="about__card-title">My Skills</h3>
+              <div class="skills-wrap">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">R</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Computer Vision</span>
+                <span class="skill-tag">YOLOv8</span>
+                <span class="skill-tag">MediaPipe</span>
+                <span class="skill-tag">LLM / AI</span>
+                <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">Next.js</span>
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">n8n</span>
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">HTML &amp; CSS</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">C++</span>
+              </div>
             </div>
+
+            <div class="glass-card about__certs-card">
+              <h3 class="about__card-title">Certifications &amp; Honours</h3>
+
+              <p class="certs__section-label">🏆 Honours</p>
+              <div class="certs__honour">
+                <div class="certs__honour-title">Best Presenter Award — CITIC 2026</div>
+                <div class="certs__honour-issuer">Multimedia University · May 2026</div>
+                <div class="certs__honour-desc">Presented "ARMS: Automated Reviewer Matching System Using Citation-based Embeddings" at CITIC 2026, hosted by DIFCON at MMU.</div>
+              </div>
+
+              <p class="certs__section-label" style="margin-top:2rem;">📜 Certifications</p>
+              <ul class="certs__list">
+                <li>
+                  <a href="https://www.linkedin.com/in/nareenthiran-bhuvaneswaran-75b523248/details/certifications/" target="_blank" class="certs__item">
+                    <span class="certs__item-name">UM Hackathon 2026</span>
+                    <span class="certs__item-issuer">PEKOM · May 2026</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/nareenthiran-bhuvaneswaran-75b523248/details/certifications/" target="_blank" class="certs__item">
+                    <span class="certs__item-name">Introduction to Responsible AI</span>
+                    <span class="certs__item-issuer">Google · May 2026</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/nareenthiran-bhuvaneswaran-75b523248/details/certifications/" target="_blank" class="certs__item">
+                    <span class="certs__item-name">Introduction to AI Agents</span>
+                    <span class="certs__item-issuer">Google · May 2026</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/nareenthiran-bhuvaneswaran-75b523248/details/certifications/" target="_blank" class="certs__item">
+                    <span class="certs__item-name">HCIA-AI V3.5 Course</span>
+                    <span class="certs__item-issuer">Huawei · Aug 2025</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/nareenthiran-bhuvaneswaran-75b523248/details/certifications/" target="_blank" class="certs__item">
+                    <span class="certs__item-name">UM Datathon 2025</span>
+                    <span class="certs__item-issuer">UMDAC · Dec 2025</span>
+                  </a>
+                </li>
+              </ul>
+              <a href="https://www.linkedin.com/in/nareenthiran-bhuvaneswaran-75b523248/details/certifications/" target="_blank" class="certs__view-all">View all on LinkedIn →</a>
+            </div>
+
           </div>
         </div>
       </div>
