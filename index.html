@@ -4,361 +4,311 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>NAREEN'S WEBSITE</title>
-    <meta name="description" content="Portfolio of Nareenthiran Bhuvaneswaran — Data Science & AI Engineer" />
-
+    <title>Nareenthiran Bhuvaneswaran — AI Engineer & Data Scientist</title>
+    <meta name="description" content="Portfolio of Nareenthiran Bhuvaneswaran — Data Science & AI Engineer building real-time CV systems, LLM apps, and full-stack AI solutions." />
     <link rel="stylesheet" href="css/style.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <header class="header">
-      <div class="header__content">
-        <div class="header__logo-container">
-          <div class="header__logo-img-cont">
-            <img
-              src="./assets/png/john-doe.png"
-              alt="Nareenthiran Bhuvaneswaran Logo"
-              class="header__logo-img"
-            />
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav" id="nav">
+      <div class="nav__container">
+        <a href="#home" class="nav__logo">
+          <div class="nav__logo-img-wrap">
+            <img src="./assets/png/nareen.jpeg" alt="Nareenthiran" class="nav__logo-img" />
           </div>
-          <span class="header__logo-sub">NAREENTHIRAN BHUVANESWARAN</span>
+          <span class="nav__logo-text">Nareen</span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#projects" class="nav__link">Projects</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="nav__mobile" id="mobileMenu">
+        <a href="#about" class="nav__mobile-link">About</a>
+        <a href="#projects" class="nav__mobile-link">Projects</a>
+        <a href="#contact" class="nav__mobile-link">Contact</a>
+      </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+      <div class="hero__bg">
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__orb hero__orb--3"></div>
+        <div class="hero__grid"></div>
+      </div>
+      <div class="hero__content">
+        <div class="hero__photo-wrap">
+          <img src="./assets/png/nareen.jpeg" alt="Nareenthiran Bhuvaneswaran" class="hero__photo" />
+          <div class="hero__photo-ring"></div>
         </div>
-        <div class="header__main">
-          <ul class="header__links">
-            <li class="header__link-wrapper">
-              <a href="./index.html" class="header__link"> Home </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#about" class="header__link">About </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#projects" class="header__link">
-                Projects
+        <p class="hero__greeting">Hello, I'm</p>
+        <h1 class="hero__name">Nareenthiran<br>Bhuvaneswaran</h1>
+        <div class="hero__role-wrap">
+          <span class="hero__role">Data Scientist</span>
+          <span class="hero__role-sep">&</span>
+          <span class="hero__role">AI Engineer</span>
+        </div>
+        <p class="hero__tagline">
+          Building real-time computer vision systems, LLM-powered apps,<br>
+          and full-stack AI solutions that actually ship.
+        </p>
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+        </div>
+        <div class="hero__socials">
+          <a href="https://www.linkedin.com/in/nareenthiran-bhuvaneswaran-75b523248/" target="_blank" class="hero__social" title="LinkedIn">
+            <img src="./assets/png/linkedin-ico.png" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/NareenBruce" target="_blank" class="hero__social" title="GitHub">
+            <img src="./assets/png/github-ico.png" alt="GitHub" />
+          </a>
+          <a href="https://x.com/nareenthiran" target="_blank" class="hero__social" title="Twitter / X">
+            <img src="./assets/png/twitter-ico.png" alt="Twitter" />
+          </a>
+          <a href="https://www.instagram.com/nareen_thiran/" target="_blank" class="hero__social" title="Instagram">
+            <img src="./assets/png/insta-ico.png" alt="Instagram" />
+          </a>
+        </div>
+      </div>
+      <div class="hero__scroll-hint">
+        <div class="mouse"><div class="mouse__wheel"></div></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">Who I Am</span>
+          <h2 class="section__title">About Me</h2>
+        </div>
+        <div class="about__grid">
+          <div class="glass-card about__bio">
+            <h3 class="about__card-title">About Me</h3>
+            <p>I'm <strong>Nareenthiran Bhuvaneswaran</strong>, a Computer Science (Data Science) student at Multimedia University with a <strong>CGPA of 3.94</strong> and Dean's List every trimester. I build things at the intersection of <strong>AI, data, and software</strong> — from real-time computer vision systems to LLM-powered applications and full-stack web platforms.</p>
+            <p>At <strong>Juara Partners</strong>, I worked as a <strong>Data Science & AI Engineer Intern</strong>, where I deployed an LLM-powered WhatsApp chatbot using Docker and the Meta Business API, built OCR pipelines, and engineered n8n automation workflows that replaced manual processes end-to-end.</p>
+            <p>For my <strong>Final Year Project</strong>, I built <strong>ARMS</strong> (Automated Reviewer Matching System) — a full-stack platform automating academic peer reviewer assignment using <strong>SPECTER transformer embeddings</strong> trained on citation graphs, matched against a self-scraped database of <strong>493 experts and 10,817 publications</strong>. A recency decay function weights temporal relevance, and a <strong>Groq 120B LLM RAG pipeline</strong> generates explainable justifications per recommendation. Validated on a real conference dataset with <strong>89.3% expert-level relevance at 0.4s per query</strong>.</p>
+            <p>My other projects include a real-time focus tracker using YOLOv8 and MediaPipe, a road hazard detection system hitting 75.9% mAP at 30 FPS, and a marketing prediction model deployed as a Streamlit app — all built with <strong>Python, FastAPI, and Next.js</strong>.</p>
+            <p>Outside of tech, I served as <strong>Vice President of Student Academics</strong> at MMU's Student Representative Council for two consecutive terms, and I'm a proud recipient of the <strong>Yayasan Telekom Malaysia (YTM) Scholarship</strong>.</p>
+            <a href="#contact" class="btn btn--primary" style="margin-top:2.4rem;display:inline-block;">Contact Me</a>
+          </div>
+          <div class="glass-card about__skills-card">
+            <h3 class="about__card-title">My Skills</h3>
+            <div class="skills-wrap">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">R</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Machine Learning</span>
+              <span class="skill-tag">Computer Vision</span>
+              <span class="skill-tag">YOLOv8</span>
+              <span class="skill-tag">MediaPipe</span>
+              <span class="skill-tag">LLM / AI</span>
+              <span class="skill-tag">FastAPI</span>
+              <span class="skill-tag">Next.js</span>
+              <span class="skill-tag">Flask</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">n8n</span>
+              <span class="skill-tag">Power BI</span>
+              <span class="skill-tag">HTML &amp; CSS</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">C++</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">What I've Built</span>
+          <h2 class="section__title">Projects</h2>
+          <p class="section__sub">A collection of my work in AI, computer vision, and full-stack development.</p>
+        </div>
+        <div class="projects__grid">
+
+          <!-- ARMS (FYP) -->
+          <div class="glass-card project-card">
+            <div class="project-card__img-wrap">
+              <img src="./assets/png/arms.png" alt="ARMS Screenshot" class="project-card__img" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="https://github.com/NareenBruce/ARMS" target="_blank" class="btn btn--primary btn--sm">View on GitHub</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="project-tag">SPECTER</span>
+                <span class="project-tag">RAG</span>
+                <span class="project-tag">Groq 120B</span>
+                <span class="project-tag">FastAPI</span>
+                <span class="project-tag">Next.js</span>
+              </div>
+              <h3 class="project-card__title">ARMS — Automated Reviewer Matching System <span style="font-size:1.3rem;font-weight:500;color:var(--accent);margin-left:0.6rem;">FYP</span></h3>
+              <p class="project-card__desc">Full-stack platform automating academic peer reviewer assignment using SPECTER transformer embeddings trained on citation graphs, matched against a self-scraped database of 493 experts and 10,817 publications. A recency decay function weights temporal relevance, and a Groq 120B LLM RAG pipeline generates explainable justifications. Validated on a real conference dataset with 89.3% expert-level relevance at 0.4s per query.</p>
+              <a href="https://github.com/NareenBruce/ARMS" target="_blank" class="project-card__link">
+                <img src="./assets/png/github-ico.png" alt="" />
+                View Repository →
               </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#contact" class="header__link"> Contact </a>
-            </li>
-          </ul>
-          <div class="header__main-ham-menu-cont">
-            <img
-              src="./assets/svg/ham-menu.svg"
-              alt="hamburger menu"
-              class="header__main-ham-menu"
-            />
-            <img
-              src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
-              class="header__main-ham-menu-close d-none"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="header__sm-menu">
-        <div class="header__sm-menu-content">
-          <ul class="header__sm-menu-links">
-            <li class="header__sm-menu-link">
-              <a href="./index.html"> Home </a>
-            </li>
-            <li class="header__sm-menu-link">
-              <a href="./index.html#about"> About </a>
-            </li>
-            <li class="header__sm-menu-link">
-              <a href="./index.html#projects"> Projects </a>
-            </li>
-            <li class="header__sm-menu-link">
-              <a href="./index.html#contact"> Contact </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
-
-    <section class="home-hero">
-      <div class="home-hero__content">
-        <h1 class="heading-primary">Hey, I'm NAREENTHIRAN BHUVANESWARAN 👋</h1>
-        <div class="home-hero__info">
-          <p class="text-primary">
-            Data Science student & AI Engineer — building real-time computer vision systems,
-            LLM-powered apps, and full-stack AI solutions. Scroll down to see what I've been working on!
-          </p>
-        </div>
-        <div class="home-hero__cta">
-          <a href="./index.html#projects" class="btn btn--bg">Projects</a>
-        </div>
-      </div>
-      <div class="home-hero__socials">
-        <div class="home-hero__social">
-          <a href="https://www.linkedin.com/in/nareenthiran-bhuvaneswaran-75b523248/" target="_blank" class="home-hero__social-icon-link">
-            <img src="./assets/png/linkedin-ico.png" alt="LinkedIn" class="home-hero__social-icon" />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="https://github.com/NareenBruce" target="_blank" class="home-hero__social-icon-link">
-            <img src="./assets/png/github-ico.png" alt="GitHub" class="home-hero__social-icon" />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="https://x.com/nareenthiran" target="_blank" class="home-hero__social-icon-link">
-            <img src="./assets/png/twitter-ico.png" alt="Twitter/X" class="home-hero__social-icon" />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="https://www.instagram.com/nareen_thiran/" class="home-hero__social-icon-link home-hero__social-icon-link--bd-none" target="_blank">
-            <img src="./assets/png/insta-ico.png" alt="Instagram" class="home-hero__social-icon" />
-          </a>
-        </div>
-      </div>
-      <div class="home-hero__mouse-scroll-cont">
-        <div class="mouse"></div>
-      </div>
-    </section>
-
-    <section id="about" class="about sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main">About Me</span>
-          <span class="heading-sec__sub">
-            I am a Computer Science student specialising in <b>Data Science</b> at Multimedia University,
-            maintaining a <b>CGPA of 3.94</b> with Dean's List recognition every trimester. Recipient of the
-            <b>Yayasan Telekom Malaysia (YTM) Scholarship</b>. My work spans real-time
-            <b>computer vision systems</b>, <b>LLM-powered applications</b>, and end-to-end
-            <b>full-stack AI deployment</b> — from webcam-based focus tracking to road hazard detection
-            and automated WhatsApp chatbots.
-          </span>
-        </h2>
-        <div class="about__content">
-          <div class="about__content-main">
-            <h3 class="about__content-title">Get to know me!</h3>
-            <div class="about__content-details">
-              <p class="about__content-details-para">
-                Hi! I'm <b>Nareenthiran Bhuvaneswaran</b>, a passionate builder at the intersection of
-                AI, data, and software engineering. I've built real-time computer vision systems using
-                <b>YOLOv8 and MediaPipe</b>, deployed LLM-powered chatbots with <b>Docker and n8n</b>,
-                and developed full-stack applications with <b>FastAPI and Next.js</b>. I also served as
-                <b>Vice President of Student Academics</b> at MMU's Student Representative Council for two
-                consecutive terms — because I believe great engineers are great collaborators too.
-              </p>
-              <p class="about__content-details-para">
-                Feel free to <strong>contact</strong> me here.
-              </p>
-            </div>
-            <a href="./index.html#contact" class="btn btn--med btn--theme dynamicBgClr">Contact</a>
-          </div>
-          <div class="about__content-skills">
-            <h3 class="about__content-title">My Skills</h3>
-            <div class="skills">
-              <div class="skills__skill">Python</div>
-              <div class="skills__skill">R</div>
-              <div class="skills__skill">SQL</div>
-              <div class="skills__skill">JavaScript</div>
-              <div class="skills__skill">TypeScript</div>
-              <div class="skills__skill">Machine Learning</div>
-              <div class="skills__skill">Computer Vision</div>
-              <div class="skills__skill">YOLOv8</div>
-              <div class="skills__skill">MediaPipe</div>
-              <div class="skills__skill">LLM / AI</div>
-              <div class="skills__skill">FastAPI</div>
-              <div class="skills__skill">Next.js</div>
-              <div class="skills__skill">Flask</div>
-              <div class="skills__skill">Docker</div>
-              <div class="skills__skill">n8n</div>
-              <div class="skills__skill">Power BI</div>
-              <div class="skills__skill">HTML</div>
-              <div class="skills__skill">CSS</div>
-              <div class="skills__skill">GIT</div>
-              <div class="skills__skill">Java</div>
-              <div class="skills__skill">C++</div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="projects sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-bg">
-          <span class="heading-sec__main">Projects</span>
-          <span class="heading-sec__sub">
-            Here are some of the projects I have worked on. Click the button to view the GitHub repository or live demo.
-          </span>
-        </h2>
-
-        <div class="projects__content">
 
           <!-- FocusMirror -->
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/png/focusmirror.png"
-                alt="FocusMirror Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
+          <div class="glass-card project-card">
+            <div class="project-card__img-wrap">
+              <img src="./assets/png/focusmirror.png" alt="FocusMirror Screenshot" class="project-card__img" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="https://github.com/nareenbruce456/FocusMirror" target="_blank" class="btn btn--primary btn--sm">View on GitHub</a>
+              </div>
             </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">FocusMirror — Real-Time Focus Tracker</h3>
-              <p class="projects__row-content-desc">
-                A real-time focus-tracking app that uses your webcam to classify your state —
-                Focused, Distracted (phone in hand), Sleepy, or Away — and logs it across a work session.
-                Fuses <b>MediaPipe Face Mesh</b> (Eye/Mouth Aspect Ratio for drowsiness) with
-                <b>GPU-accelerated YOLOv8</b> phone detection through a custom state machine with
-                debounced smoothing. A <b>FastAPI WebSocket</b> backend streams live results to a
-                <b>Next.js/TypeScript</b> frontend. Session summary exports to CSV with time-per-state,
-                phone pickups, and longest focus streak. Fully local — no video ever leaves the machine.
-              </p>
-              <a
-                href="https://github.com/nareenbruce456/FocusMirror"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-              >Learn More <img src="./assets/png/github-ico.png" alt="GitHub"></a>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="project-tag">YOLOv8</span>
+                <span class="project-tag">MediaPipe</span>
+                <span class="project-tag">FastAPI</span>
+                <span class="project-tag">Next.js</span>
+              </div>
+              <h3 class="project-card__title">FocusMirror</h3>
+              <p class="project-card__desc">Real-time webcam focus tracker that classifies Focused, Distracted, Sleepy, or Away states. Fuses MediaPipe Face Mesh with GPU-accelerated YOLOv8. FastAPI WebSocket backend, Next.js frontend. Exports session CSV with focus streaks. Fully local — no video leaves the machine.</p>
+              <a href="https://github.com/nareenbruce456/FocusMirror" target="_blank" class="project-card__link">
+                <img src="./assets/png/github-ico.png" alt="" />
+                View Repository →
+              </a>
             </div>
           </div>
 
-          <!-- Smart Road Hazard Detection -->
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/png/roadhazard.png"
-                alt="Road Hazard Detection Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
+          <!-- Road Hazard -->
+          <div class="glass-card project-card">
+            <div class="project-card__img-wrap">
+              <img src="./assets/png/roadhazard.png" alt="Road Hazard Detection Screenshot" class="project-card__img" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="https://github.com/NareenBruce/VIP_Project" target="_blank" class="btn btn--primary btn--sm">View on GitHub</a>
+              </div>
             </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Smart Road Hazard Detection System</h3>
-              <p class="projects__row-content-desc">
-                An automated real-time computer vision system that detects road hazards — potholes,
-                cracks, and open manholes — from live dashcam feeds. Trained a lightweight
-                <b>YOLOv8n</b> model on ~2,700 annotated images with transfer learning from COCO
-                and data augmentation. Achieved <b>75.9% mAP@0.5</b> at ~30 FPS real-time inference.
-                Integrated into a full-stack web app with a <b>Python FastAPI</b> backend and
-                <b>Next.js</b> frontend, featuring a live detection dashboard, detection history log,
-                and bounding box overlays with confidence scores.
-              </p>
-              <a
-                href="https://github.com/NareenBruce/VIP_Project"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-              >Learn More <img src="./assets/png/github-ico.png" alt="GitHub"></a>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="project-tag">YOLOv8n</span>
+                <span class="project-tag">FastAPI</span>
+                <span class="project-tag">Next.js</span>
+                <span class="project-tag">CV</span>
+              </div>
+              <h3 class="project-card__title">Smart Road Hazard Detection</h3>
+              <p class="project-card__desc">Detects potholes, cracks, and open manholes from live dashcam feeds. Trained YOLOv8n on ~2,700 annotated images. Achieved 75.9% mAP@0.5 at ~30 FPS. Full-stack web app with live detection dashboard and bounding box confidence overlays.</p>
+              <a href="https://github.com/NareenBruce/VIP_Project" target="_blank" class="project-card__link">
+                <img src="./assets/png/github-ico.png" alt="" />
+                View Repository →
+              </a>
             </div>
           </div>
 
           <!-- Bank Lead AI -->
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/png/bankleadai.png"
-                alt="Bank Lead AI Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
+          <div class="glass-card project-card">
+            <div class="project-card__img-wrap">
+              <img src="./assets/png/bankleadai.png" alt="Bank Lead AI Screenshot" class="project-card__img" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="https://github.com/NareenBruce" target="_blank" class="btn btn--primary btn--sm">View on GitHub</a>
+              </div>
             </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Bank Lead AI — Marketing Prediction Model</h3>
-              <p class="projects__row-content-desc">
-                A data mining solution to predict customer subscription success using the UCI Bank
-                Marketing dataset. Built and compared <b>Logistic Regression, Decision Tree, Random Forest,
-                and Gradient Boosting</b> models. Addressed severe class imbalance using <b>SMOTE</b>.
-                Best performance: Random Forest with <b>ROC-AUC of 0.783</b>. Deployed as a
-                <b>Streamlit</b> application supporting real-time single-customer prediction and
-                bulk CSV analysis for marketing teams.
-              </p>
-              <a
-                href="https://github.com/NareenBruce"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-              >Learn More <img src="./assets/png/github-ico.png" alt="GitHub"></a>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="project-tag">ML</span>
+                <span class="project-tag">SMOTE</span>
+                <span class="project-tag">Streamlit</span>
+                <span class="project-tag">Python</span>
+              </div>
+              <h3 class="project-card__title">Bank Lead AI</h3>
+              <p class="project-card__desc">Marketing prediction model comparing Logistic Regression, Decision Tree, Random Forest, and Gradient Boosting on the UCI dataset. Addressed class imbalance with SMOTE. Best: Random Forest ROC-AUC 0.783. Deployed as a Streamlit app with bulk CSV analysis.</p>
+              <a href="https://github.com/NareenBruce" target="_blank" class="project-card__link">
+                <img src="./assets/png/github-ico.png" alt="" />
+                View Repository →
+              </a>
             </div>
           </div>
 
-          <!-- LLM WhatsApp Chatbot -->
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/png/chatbot.png"
-                alt="LLM WhatsApp Chatbot Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
+          <!-- LLM Chatbot -->
+          <div class="glass-card project-card">
+            <div class="project-card__img-wrap">
+              <img src="./assets/png/chatbot.png" alt="LLM WhatsApp Chatbot Screenshot" class="project-card__img" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="https://github.com/NareenBruce" target="_blank" class="btn btn--primary btn--sm">View on GitHub</a>
+              </div>
             </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Full-Stack LLM-Powered WhatsApp Chatbot</h3>
-              <p class="projects__row-content-desc">
-                Orchestrated a self-hosted, scalable LLM-powered WhatsApp chatbot using
-                <b>Docker</b> and <b>Cloudflare</b>, managing the entire <b>n8n</b> workflow
-                environment locally. Integrated the <b>Meta Business API</b> for seamless WhatsApp
-                message routing. Built a real-time Custom Agent Console in <b>Next.js</b>, exposed
-                securely via ngrok, for live monitoring and agent interactions. Also implemented
-                <b>OCR pipelines</b> and <b>webhook-based automation</b> at Juara Partners using
-                this same architecture.
-              </p>
-              <a
-                href="https://github.com/NareenBruce"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-              >Learn More <img src="./assets/png/github-ico.png" alt="GitHub"></a>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="project-tag">LLM</span>
+                <span class="project-tag">Docker</span>
+                <span class="project-tag">n8n</span>
+                <span class="project-tag">Next.js</span>
+              </div>
+              <h3 class="project-card__title">LLM WhatsApp Chatbot</h3>
+              <p class="project-card__desc">Self-hosted LLM-powered WhatsApp chatbot using Docker and Cloudflare with n8n workflow orchestration. Integrated Meta Business API. Built real-time Custom Agent Console in Next.js. Includes OCR pipelines and webhook-based automation.</p>
+              <a href="https://github.com/NareenBruce" target="_blank" class="project-card__link">
+                <img src="./assets/png/github-ico.png" alt="" />
+                View Repository →
+              </a>
             </div>
           </div>
 
-          <!-- Mr White & Imposter -->
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/png/mrwhite.png"
-                alt="Mr White and Imposter Game Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
+          <!-- Mr. White -->
+          <div class="glass-card project-card">
+            <div class="project-card__img-wrap">
+              <img src="./assets/png/mrwhite.png" alt="Mr. White & Imposter Game Screenshot" class="project-card__img" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="https://lnkd.in/g4m2q69C" target="_blank" class="btn btn--primary btn--sm">Play Live 🎮</a>
+              </div>
             </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Mr. White &amp; Imposter — AI-Built Party Game</h3>
-              <p class="projects__row-content-desc">
-                A production-ready party game app built from concept to launch in <b>60 minutes</b>
-                using an AI-powered workflow (Google AI Studio, Gemini, prompt engineering).
-                Features blind identity logic where the agent's role is concealed until the final
-                reveal, dynamic game flow with randomised rotation, and a premium mobile UI using
-                <b>React + Vite</b>, <b>Tailwind CSS</b>, and <b>Framer Motion</b> with glassmorphism
-                animations. A live demonstration of AI-accelerated development.
-              </p>
-              <a
-                href="https://lnkd.in/g4m2q69C"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-              >Play Live 🎮</a>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Vite</span>
+                <span class="project-tag">Tailwind</span>
+                <span class="project-tag">Gemini</span>
+              </div>
+              <h3 class="project-card__title">Mr. White &amp; Imposter</h3>
+              <p class="project-card__desc">Production-ready party game built from concept to launch in 60 minutes with AI (Google AI Studio + Gemini). Blind identity logic, dynamic game flow, and premium mobile UI with React + Vite, Tailwind CSS, Framer Motion, and glassmorphism animations.</p>
+              <a href="https://lnkd.in/g4m2q69C" target="_blank" class="project-card__link">
+                Play Live 🎮 →
+              </a>
             </div>
           </div>
 
-          <!-- Elderly Care App -->
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/png/elderly.png"
-                alt="Elderly Care App Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
+          <!-- Elderly Care -->
+          <div class="glass-card project-card">
+            <div class="project-card__img-wrap">
+              <img src="./assets/png/elderly.png" alt="Elderly Care App Screenshot" class="project-card__img" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="https://github.com/NareenBruce/SmartComp" target="_blank" class="btn btn--primary btn--sm">View on GitHub</a>
+              </div>
             </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Elderly Care Companion App with Emergency Alerts</h3>
-              <p class="projects__row-content-desc">
-                Led development of a full-stack web application for elderly care with real-time
-                emergency alert capabilities. Built using <b>HTML, CSS, and JavaScript</b> for the
-                frontend and <b>Flask (Python)</b> for the backend, featuring real-time chat and
-                emergency alerts. Successfully deployed on <b>Render</b> for public accessibility.
-                Took the lead role in the team, managing both architecture and implementation.
-              </p>
-              <a
-                href="https://github.com/NareenBruce/SmartComp"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-              >Learn More <img src="./assets/png/github-ico.png" alt="GitHub"></a>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="project-tag">Flask</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Render</span>
+              </div>
+              <h3 class="project-card__title">Elderly Care Companion</h3>
+              <p class="project-card__desc">Full-stack web app for elderly care with real-time emergency alerts. Built with HTML/CSS/JS + Flask backend. Features real-time chat and alert system. Deployed on Render. Led the team as architect and primary developer.</p>
+              <a href="https://github.com/NareenBruce/SmartComp" target="_blank" class="project-card__link">
+                <img src="./assets/png/github-ico.png" alt="" />
+                View Repository →
+              </a>
             </div>
           </div>
 
@@ -366,57 +316,65 @@
       </div>
     </section>
 
-    <section id="contact" class="contact sec-pad dynamicBg">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
-          <span class="heading-sec__sub heading-sec__sub--lt">
-            You can reach me via email or WhatsApp, and I'll respond as soon as possible. Just click the icons below to get in touch!<br>
-            <span class="icon">
-              <a href="mailto:nareenthiran5@gmail.com" target="_blank">
-                <img src="./assets/png/gmail-ico.png" alt="Email">
-              </a>
-              <a href="https://wa.me/+60167459771" target="_blank">
-                <img src="./assets/png/whatsapp-ico.png" alt="WhatsApp">
-              </a>
-            </span>
-          </span>
-        </h2>
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">Let's Connect</span>
+          <h2 class="section__title">Get in Touch</h2>
+          <p class="section__sub">I'm always open to new opportunities and collaborations. Drop me a message!</p>
+        </div>
+        <div class="contact__card glass-card">
+          <p class="contact__text">Reach me via email or WhatsApp — I'll get back to you as soon as possible.</p>
+          <div class="contact__links">
+            <a href="mailto:nareenthiran5@gmail.com" target="_blank" class="contact__icon-link" title="Email">
+              <div class="contact__icon-wrap">
+                <img src="./assets/png/gmail-ico.png" alt="Email" />
+              </div>
+              <span>Email</span>
+            </a>
+            <a href="https://wa.me/+60167459771" target="_blank" class="contact__icon-link" title="WhatsApp">
+              <div class="contact__icon-wrap">
+                <img src="./assets/png/whatsapp-ico.png" alt="WhatsApp" />
+              </div>
+              <span>WhatsApp</span>
+            </a>
+            <a href="https://www.linkedin.com/in/nareenthiran-bhuvaneswaran-75b523248/" target="_blank" class="contact__icon-link" title="LinkedIn">
+              <div class="contact__icon-wrap">
+                <img src="./assets/png/linkedin-ico.png" alt="LinkedIn" />
+              </div>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/NareenBruce" target="_blank" class="contact__icon-link" title="GitHub">
+              <div class="contact__icon-wrap">
+                <img src="./assets/png/github-ico.png" alt="GitHub" />
+              </div>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <footer class="main-footer">
-      <div class="main-container">
-        <div class="main-footer__upper">
-          <div class="main-footer__row main-footer__row-1">
-            <h2 class="heading heading-sm main-footer__heading-sm">
-              <span>Social</span>
-            </h2>
-            <div class="main-footer__social-cont">
-              <a href="https://www.linkedin.com/in/nareenthiran-bhuvaneswaran-75b523248/" target="_blank">
-                <img class="main-footer__icon" src="./assets/png/linkedin-ico.png" alt="LinkedIn" />
-              </a>
-              <a href="https://github.com/NareenBruce" target="_blank">
-                <img class="main-footer__icon" src="./assets/png/github-ico.png" alt="GitHub" />
-              </a>
-              <a href="https://x.com/nareenthiran" target="_blank">
-                <img class="main-footer__icon" src="./assets/png/twitter-ico.png" alt="Twitter/X" />
-              </a>
-              <a target="_blank" href="https://www.instagram.com/nareen_thiran/">
-                <img class="main-footer__icon main-footer__icon--mr-none" src="./assets/png/insta-ico.png" alt="Instagram" />
-              </a>
-            </div>
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <p class="footer__copy">© 2026 Nareenthiran Bhuvaneswaran</p>
+          <div class="footer__socials">
+            <a href="https://www.linkedin.com/in/nareenthiran-bhuvaneswaran-75b523248/" target="_blank" title="LinkedIn">
+              <img src="./assets/png/linkedin-ico.png" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/NareenBruce" target="_blank" title="GitHub">
+              <img src="./assets/png/github-ico.png" alt="GitHub" />
+            </a>
+            <a href="https://x.com/nareenthiran" target="_blank" title="Twitter">
+              <img src="./assets/png/twitter-ico.png" alt="Twitter" />
+            </a>
+            <a href="https://www.instagram.com/nareen_thiran/" target="_blank" title="Instagram">
+              <img src="./assets/png/insta-ico.png" alt="Instagram" />
+            </a>
           </div>
-          <div class="main-footer__row main-footer__row-2">
-            <h4 class="heading heading-sm text-lt">Nareenthiran Bhuvaneswaran</h4>
-            <p class="main-footer__short-desc">
-              Connect with me across all my social media platforms!<br>
-              Click the icons to visit my profiles, and don't forget to hit follow!
-            </p>
-          </div>
-        </div>
-        <div class="main-footer__lower">
-          &copy; Copyright 2026. Made by <b>Nareenthiran Bhuvaneswaran</b>
         </div>
       </div>
     </footer>
