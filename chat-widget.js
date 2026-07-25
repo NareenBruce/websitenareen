@@ -132,13 +132,22 @@
       .replace(/"/g, "&quot;");
   }
 
-  // Turn raw URLs / wa.me links into anchors. Input is escaped first, so this
-  // only ever runs on safe text.
+  // Render markdown-style [label](url) links first, then any leftover bare
+  // URLs. Input is escaped beforehand, so this only runs on safe text.
   function linkify(safeText) {
-    return safeText.replace(
-      /(https?:\/\/[^\s]+)/g,
-      '<a href="$1" target="_blank" rel="noopener" style="color:#4da3ff;text-decoration:underline;">$1</a>'
+    const anchor =
+      'style="color:#4da3ff;text-decoration:underline;"';
+    // [label](url)
+    let out = safeText.replace(
+      /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
+      '<a href="$2" target="_blank" rel="noopener" ' + anchor + ">$1</a>"
     );
+    // bare URLs not already inside an anchor
+    out = out.replace(
+      /(^|[^"'>])(https?:\/\/[^\s<]+)/g,
+      '$1<a href="$2" target="_blank" rel="noopener" ' + anchor + ">$2</a>"
+    );
+    return out;
   }
 
   function addMsg(text, who) {
@@ -233,7 +242,7 @@
     } catch (err) {
       hideTyping();
       addMsg(
-        "⚠️ I'm having trouble reaching the server right now. You can message Bruce directly here: https://wa.me/60167459771?text=Hi%20Bruce%2C%20I%20was%20on%20your%20portfolio%20and%20wanted%20to%20reach%20you.",
+        "⚠️ I'm having trouble reaching the server right now.\n\n[👉 Click here to message Bruce on WhatsApp](https://wa.me/60167459771?text=Hi%20Bruce%2C%20I%20was%20on%20your%20portfolio%20and%20wanted%20to%20reach%20you.)",
         "bot"
       );
     } finally {
