@@ -124,10 +124,33 @@
   const sendBtn = panel.querySelector("#nchatSend");
 
   // ---- HELPERS --------------------------------------------------------------
+  function escapeHtml(s) {
+    return s
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  // Turn raw URLs / wa.me links into anchors. Input is escaped first, so this
+  // only ever runs on safe text.
+  function linkify(safeText) {
+    return safeText.replace(
+      /(https?:\/\/[^\s]+)/g,
+      '<a href="$1" target="_blank" rel="noopener" style="color:#4da3ff;text-decoration:underline;">$1</a>'
+    );
+  }
+
   function addMsg(text, who) {
     const el = document.createElement("div");
     el.className = "nchat-msg " + who;
-    el.textContent = text;
+    if (who === "bot") {
+      // Bot text is trusted (our copy or n8n's) — escape then linkify.
+      el.innerHTML = linkify(escapeHtml(text));
+    } else {
+      // User text stays inert.
+      el.textContent = text;
+    }
     body.appendChild(el);
     body.scrollTop = body.scrollHeight;
     return el;
@@ -210,7 +233,7 @@
     } catch (err) {
       hideTyping();
       addMsg(
-        "⚠️ I'm having trouble reaching the server right now. You can reach Bruce directly on WhatsApp at +60 16-745 9771.",
+        "⚠️ I'm having trouble reaching the server right now. You can message Bruce directly here: https://wa.me/60167459771?text=Hi%20Bruce%2C%20I%20was%20on%20your%20portfolio%20and%20wanted%20to%20reach%20you.",
         "bot"
       );
     } finally {
