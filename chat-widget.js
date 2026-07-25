@@ -30,10 +30,11 @@
   // ---- STYLES ---------------------------------------------------------------
   const css = `
   .nchat-launcher{position:fixed;bottom:24px;right:24px;width:60px;height:60px;border-radius:50%;
-    background:${ACCENT};border:none;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.35);
-    display:flex;align-items:center;justify-content:center;z-index:99998;transition:transform .2s ease,box-shadow .2s ease;}
-  .nchat-launcher:hover{transform:scale(1.06);box-shadow:0 8px 26px rgba(0,98,185,.5);}
-  .nchat-launcher svg{width:28px;height:28px;fill:#fff;}
+    background:#12151c;border:2px solid ${ACCENT};cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.45);
+    display:flex;align-items:center;justify-content:center;z-index:99998;transition:transform .2s ease,box-shadow .2s ease,background .2s ease;}
+  .nchat-launcher:hover{transform:scale(1.06);background:${ACCENT};box-shadow:0 8px 26px rgba(0,98,185,.55);}
+  .nchat-launcher svg{width:26px;height:26px;fill:${ACCENT};transition:fill .2s ease;}
+  .nchat-launcher:hover svg{fill:#fff;}
   .nchat-launcher .nchat-close-ico{display:none;}
   .nchat-launcher.open .nchat-open-ico{display:none;}
   .nchat-launcher.open .nchat-close-ico{display:block;}
