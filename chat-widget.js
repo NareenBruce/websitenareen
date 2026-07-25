@@ -8,7 +8,7 @@
 
   // ---- CONFIG ---------------------------------------------------------------
   const WEBHOOK_URL =
-    "https://n8n.nareenbruce.tech/webhook-test/b4f2f851-b881-4bce-8c27-b4d7a8a5e2a4";
+    "https://n8n.nareenbruce.tech/webhook/b4f2f851-b881-4bce-8c27-b4d7a8a5e2a4";
   const WELCOME =
     "👋 Hi there! I'm Bruce's assistant. Bruce is a Data Science & AI engineer who loves building things that actually ship — from ML pipelines to data dashboards to self-hosted systems.\n\nAsk me anything about his work, skills, or projects. And if you'd like to get in touch with him directly, just say the word — I can pass your message straight to him. 😊";
   const ACCENT = "#0062b9";
