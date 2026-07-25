@@ -8,7 +8,7 @@
 
   // ---- CONFIG ---------------------------------------------------------------
   const WEBHOOK_URL =
-    "https://n8n.nareenbruce.tech/webhook/b4f2f851-b881-4bce-8c27-b4d7a8a5e2a4";
+    "https://n8n.nareenbruce.tech/webhook-test/b4f2f851-b881-4bce-8c27-b4d7a8a5e2a4";
   const WELCOME =
     "👋 Hi there! I'm Bruce's assistant. Bruce is a Data Science & AI engineer who loves building things that actually ship — from ML pipelines to data dashboards to self-hosted systems.\n\nAsk me anything about his work, skills, or projects. And if you'd like to get in touch with him directly, just say the word — I can pass your message straight to him. 😊";
   const ACCENT = "#0062b9";
@@ -134,13 +134,36 @@
 
   // Render markdown-style [label](url) links first, then any leftover bare
   // URLs. Input is escaped beforehand, so this only runs on safe text.
+  // wa.me links become a green WhatsApp button; everything else is a text link.
   function linkify(safeText) {
-    const anchor =
-      'style="color:#4da3ff;text-decoration:underline;"';
-    // [label](url)
+    const anchor = 'style="color:#4da3ff;text-decoration:underline;"';
+    const waIcon =
+      '<svg viewBox="0 0 24 24" width="18" height="18" style="vertical-align:middle;margin-right:8px;fill:#fff;flex-shrink:0;"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4C8.7 21.5 10.3 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>';
+    const waBtn =
+      'style="display:inline-flex;align-items:center;justify-content:center;background:#25D366;color:#fff;font-weight:500;font-size:14px;padding:11px 18px;border-radius:24px;text-decoration:none;margin-top:6px;box-shadow:0 2px 8px rgba(37,211,102,.3);"';
+
+    // [label](url) — WhatsApp links get the button treatment
     let out = safeText.replace(
       /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
-      '<a href="$2" target="_blank" rel="noopener" ' + anchor + ">$1</a>"
+      function (_m, label, url) {
+        if (/wa\.me|api\.whatsapp\.com/i.test(url)) {
+          // Drop any leading emoji/symbol from the label; the button has its own icon.
+          var clean = label.replace(/^[^\w(]+/, "").trim() || "Chat on WhatsApp";
+          return (
+            '<a href="' +
+            url +
+            '" target="_blank" rel="noopener" ' +
+            waBtn +
+            ">" +
+            waIcon +
+            clean +
+            "</a>"
+          );
+        }
+        return (
+          '<a href="' + url + '" target="_blank" rel="noopener" ' + anchor + ">" + label + "</a>"
+        );
+      }
     );
     // bare URLs not already inside an anchor
     out = out.replace(
@@ -242,7 +265,7 @@
     } catch (err) {
       hideTyping();
       addMsg(
-        "⚠️ I'm having trouble reaching the server right now.\n\n[👉 Click here to message Bruce on WhatsApp](https://wa.me/60167459771?text=Hi%20Bruce%2C%20I%20was%20on%20your%20portfolio%20and%20wanted%20to%20reach%20you.)",
+        "⚠️ I'm having trouble reaching the server right now.\n\n[Message Bruce on WhatsApp](https://wa.me/60167459771?text=Hi%20Bruce%2C%20I%20was%20on%20your%20portfolio%20and%20wanted%20to%20reach%20you.)",
         "bot"
       );
     } finally {
